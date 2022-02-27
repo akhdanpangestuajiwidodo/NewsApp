@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/model/article.dart';
+import 'package:news_app/screens/article_detail_page.dart';
 
 class NewsListPage extends StatelessWidget {
   static const routeName = '/article_list';
@@ -33,5 +34,8 @@ Widget _buildArticlesItem(BuildContext context, Article article) {
     leading: Image.network(article.urlToImage, width: 100,),
     title: Text(article.title),
     subtitle: Text(article.author),
+    onTap: () {
+      Navigator.pushNamed(context, ArticleDetailPage.routeName, arguments: article);
+    },
   );
 }

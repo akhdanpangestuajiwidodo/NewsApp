@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 class Article {
   late String author;
   late String title;
@@ -24,4 +26,14 @@ class Article {
    publishedAt = article['publishedAt'];
    content = article['content'];
  }
+}
+
+List<Article> parseArticles(String? json){
+  if(json == null){
+    return [];
+  }
+
+  final List parsed = jsonDecode(json);
+  print(parsed);
+  return parsed.map((e) => Article.fromJson(e)).toList();
 }

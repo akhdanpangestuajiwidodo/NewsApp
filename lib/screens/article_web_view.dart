@@ -1,10 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class ArticleWebView extends StatelessWidget {
-  const ArticleWebView({Key? key}) : super(key: key);
+
+  static const routeName = '/article_web';
+
+  final String url;
+
+
+  ArticleWebView({required this.url});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('News App'),
+      ),
+      body: WebView(
+        initialUrl: url,
+      ),
+    );
   }
 }

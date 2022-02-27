@@ -18,11 +18,20 @@ class NewsListPage extends StatelessWidget {
           return ListView.builder(
             itemCount: articles.length,
             itemBuilder: (context, index) {
-              return Container();
+              return _buildArticlesItem(context, articles[index]);
             },
           );
         },
       ),
     );
   }
+}
+
+Widget _buildArticlesItem(BuildContext context, Article article) {
+  return ListTile(
+    contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8.0),
+    leading: Image.network(article.urlToImage, width: 100,),
+    title: Text(article.title),
+    subtitle: Text(article.author),
+  );
 }

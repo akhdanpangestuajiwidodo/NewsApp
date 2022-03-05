@@ -3,6 +3,7 @@ import 'package:news_app/model/article.dart';
 import 'package:news_app/screens/NewsListPage.dart';
 import 'package:news_app/screens/article_detail_page.dart';
 import 'package:news_app/screens/article_web_view.dart';
+import 'package:news_app/styles/styles.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +20,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        colorScheme: Theme.of(context).colorScheme.copyWith(
+          primary: primaryColor,
+          onPrimary: Colors.black,
+          secondary: secondariColor,
+        )
       ),
       initialRoute: NewsListPage.routeName,
       routes: {

@@ -24,7 +24,8 @@ class MyApp extends StatelessWidget {
           primary: primaryColor,
           onPrimary: Colors.black,
           secondary: secondariColor,
-        )
+        ),
+        textTheme: myTextTheme
       ),
       initialRoute: NewsListPage.routeName,
       routes: {

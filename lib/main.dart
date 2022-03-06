@@ -25,7 +25,8 @@ class MyApp extends StatelessWidget {
           onPrimary: Colors.black,
           secondary: secondariColor,
         ),
-        textTheme: myTextTheme
+        textTheme: myTextTheme,
+        appBarTheme: AppBarTheme(elevation: 0),
       ),
       initialRoute: NewsListPage.routeName,
       routes: {

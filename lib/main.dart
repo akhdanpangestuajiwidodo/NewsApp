@@ -27,6 +27,13 @@ class MyApp extends StatelessWidget {
         ),
         textTheme: myTextTheme,
         appBarTheme: AppBarTheme(elevation: 0),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            primary: secondariColor,
+            onPrimary: Colors.white,
+            textStyle: TextStyle(),
+          )
+        ),
       ),
       initialRoute: NewsListPage.routeName,
       routes: {

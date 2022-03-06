@@ -32,6 +32,9 @@ class MyApp extends StatelessWidget {
             primary: secondariColor,
             onPrimary: Colors.white,
             textStyle: TextStyle(),
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(0)),
+            )
           )
         ),
       ),
